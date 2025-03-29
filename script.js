@@ -1,9 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const elements = document.querySelectorAll(".animated");
-    elements.forEach((el, index) => {
-        setTimeout(() => {
-            el.style.animationDelay = `${index * 0.2}s`;
-            el.classList.add("fade-in");
-        }, 200);
-    });
+    const animatedElements = document.querySelectorAll(".animated");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+        }
+    );
+
+    animatedElements.forEach((el) => observer.observe(el));
 });
