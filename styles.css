@@ -64,6 +64,8 @@ footer {
     background: #333;
     color: #fff;
 }
+
+/* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
