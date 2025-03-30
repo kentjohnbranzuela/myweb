@@ -6,6 +6,26 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+nav {
+    text-align: center;
+    background-color: #222;
+    padding: 10px 0;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 img {
     max-width: 100%;
     height: auto;
