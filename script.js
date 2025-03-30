@@ -1,28 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const animatedElements = document.querySelectorAll(".animated");
-    
-    function handleScroll() {
-        animatedElements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 50) {
-                el.classList.add("show");
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    function showSection(targetId) {
+        sections.forEach(section => {
+            if (section.id === targetId) {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
             }
         });
     }
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run on load to check if elements are already in view
-
-    // Click animations with more effects
-    document.querySelectorAll(".click-animate").forEach(el => {
-        el.addEventListener("click", function () {
-            if (!this.classList.contains("clicked")) {
-                this.classList.add("clicked"); // Add animation class
-                
-                setTimeout(() => {
-                    this.classList.remove("clicked"); // Remove class after animation ends
-                }, 300); // Same duration as animation
-            }
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            showSection(targetId);
         });
     });
+
+    // Show only the first section by default
+    showSection(sections[0].id);
 });
