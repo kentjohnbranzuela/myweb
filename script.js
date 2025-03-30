@@ -5,15 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function showSection(sectionId) {
         sections.forEach(section => {
             if ("#" + section.id === sectionId) {
-                section.style.display = "block";
-                section.classList.add("animated", "show");
+                section.classList.add("show");
             } else {
-                section.style.display = "none";
                 section.classList.remove("show");
             }
         });
 
-        // Highlight active link
+        // Highlight active menu item
         navLinks.forEach(link => {
             if (link.getAttribute("href") === sectionId) {
                 link.classList.add("active");
