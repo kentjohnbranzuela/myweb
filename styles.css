@@ -6,7 +6,30 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+    border-radius: 10px; /* Optional: Rounded edges */
+}
 
+/* Profile Picture */
+.profile-pic {
+    width: 200px; /* Adjust the size */
+    height: 200px; /* Maintain square shape */
+    object-fit: cover; /* Crop image if needed */
+    border-radius: 50%; /* Make it circular */
+}
+
+/* Project Images */
+.project-img {
+    width: 100%; /* Make it responsive */
+    max-width: 500px; /* Set a maximum size */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
 .container {
     width: 80%;
     margin: auto;
