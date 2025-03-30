@@ -16,11 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Click animations with more effects
     document.querySelectorAll(".click-animate").forEach(el => {
         el.addEventListener("click", function () {
-            this.classList.add("clicked"); // Add animation class
-            
-            setTimeout(() => {
-                this.classList.remove("clicked"); // Remove class after animation ends
-            }, 300); // Same duration as animation
+            if (!this.classList.contains("clicked")) {
+                this.classList.add("clicked"); // Add animation class
+                
+                setTimeout(() => {
+                    this.classList.remove("clicked"); // Remove class after animation ends
+                }, 300); // Same duration as animation
+            }
         });
     });
 });
