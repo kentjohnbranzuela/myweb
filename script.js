@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".section");
     const navLinks = document.querySelectorAll("nav ul li a");
 
-    function showSection(targetId) {
+    function showSection(sectionId) {
         sections.forEach(section => {
-            if (section.id === targetId) {
+            if ("#" + section.id === sectionId) {
                 section.style.display = "block";
             } else {
                 section.style.display = "none";
@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            showSection(targetId);
+            const sectionId = this.getAttribute("href");
+            showSection(sectionId);
         });
     });
 
-    // Show only the first section by default
-    showSection(sections[0].id);
+    // Show only "About" section by default
+    showSection("#about");
 });
