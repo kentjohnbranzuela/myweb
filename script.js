@@ -16,17 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Click animations with more effects
     document.querySelectorAll(".click-animate").forEach(el => {
         el.addEventListener("click", function () {
-            this.style.transform = "scale(1.1) rotate(5deg)";
-            this.style.transition = "transform 0.3s ease-in-out";
-            this.style.pointerEvents = "none"; // Disable clicks during animation
-
+            this.classList.add("clicked"); // Add animation class
+            
             setTimeout(() => {
-                this.style.transform = "scale(1) rotate(0deg)";
-            }, 300);
-
-            setTimeout(() => {
-                this.style.pointerEvents = "auto"; // Enable clicks again
-            }, 310);
+                this.classList.remove("clicked"); // Remove class after animation ends
+            }, 300); // Same duration as animation
         });
     });
 });
