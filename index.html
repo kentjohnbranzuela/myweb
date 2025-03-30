@@ -12,100 +12,93 @@
             <h1 class="animated">Kent John Branzuela</h1>
             <nav>
                 <ul>
-                    <li><a href="#about" class="animated">About</a></li>
-                    <li><a href="#projects" class="animated">Projects</a></li>
-                    <li><a href="#skills" class="animated">Skills</a></li>
-                    <li><a href="#achievements" class="animated">Achievements</a></li>
-                    <li><a href="#habits" class="animated">Habits</a></li>
-                    <li><a href="#contact" class="animated">Contact</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#habits" class="nav-link">Habits</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="animated">About Me</h2>
-            <img src="p1.jpg" alt="Profile Picture" class="profile-pic animated">
-            <p class="animated">I'm a professional web developer specializing in modern, responsive designs. Passionate about building high-quality web applications with clean code and great user experience.</p>
-        </div>
-    </section>
-    
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="animated">Projects</h2>
-            <div class="project animated">
-                <h3>Portfolio Website</h3>
-                <p>A modern and responsive portfolio website showcasing my skills and projects.</p>
-                <img src="project1.jpg" alt="Portfolio Website" class="project-img">
+    <main>
+        <section id="about" class="section-content active">
+            <div class="container">
+                <h2>About Me</h2>
+                <img src="p1.jpg" alt="Profile Picture" class="profile-pic">
+                <p>I'm a professional web developer specializing in modern, responsive designs...</p>
             </div>
-            <div class="project animated">
-                <h3>E-Commerce Platform</h3>
-                <p>Developed a full-stack e-commerce platform with user authentication and payment integration.</p>
-                <img src="project2.jpg" alt="E-Commerce Platform" class="project-img">
+        </section>
+        
+        <section id="projects" class="section-content">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>A modern and responsive portfolio website.</p>
+                    <img src="project1.jpg" alt="Portfolio Website" class="project-img">
+                </div>
+                <div class="project">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Developed a full-stack e-commerce platform.</p>
+                    <img src="project2.jpg" alt="E-Commerce Platform" class="project-img">
+                </div>
             </div>
-            <div class="project animated">
-                <h3>Task Manager App</h3>
-                <p>A productivity app to manage tasks, set deadlines, and track progress efficiently.</p>
-                <img src="project3.jpg" alt="Task Manager App" class="project-img">
+        </section>
+        
+        <section id="skills" class="section-content">
+            <div class="container">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React.js & Vue.js</li>
+                    <li>Laravel & PHP</li>
+                    <li>Node.js & Express.js</li>
+                </ul>
             </div>
-        </div>
-    </section>
-    
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="animated">Skills</h2>
-            <ul class="animated">
-                <li>HTML, CSS, JavaScript</li>
-                <li>React.js & Vue.js</li>
-                <li>Laravel & PHP</li>
-                <li>Node.js & Express.js</li>
-                <li>Database Management</li>
-            </ul>
-        </div>
-    </section>
-    
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2 class="animated">Achievements</h2>
-            <ul class="animated">
-                <li>Developed and launched multiple web applications</li>
-                <li>Completed advanced certifications in web development</li>
-                <li>Worked with top-tier clients on enterprise projects</li>
-            </ul>
-        </div>
-    </section>
-    
-    <section id="habits" class="section">
-        <div class="container">
-            <h2 class="animated">Habits</h2>
-            <ul class="animated">
-                <li>Continuous learning and self-improvement</li>
-                <li>Building personal projects in free time</li>
-                <li>Staying updated with tech trends</li>
-                <li>Helping the developer community</li>
-            </ul>
-        </div>
-    </section>
-    
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="animated">Contact</h2>
-            <form id="contact-form" class="animated">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
+        </section>
+        
+        <section id="achievements" class="section-content">
+            <div class="container">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>Developed multiple web applications</li>
+                    <li>Completed advanced certifications</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="habits" class="section-content">
+            <div class="container">
+                <h2>Habits</h2>
+                <ul>
+                    <li>Continuous learning</li>
+                    <li>Building personal projects</li>
+                    <li>Staying updated with tech trends</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="contact" class="section-content">
+            <div class="container">
+                <h2>Contact</h2>
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
     
     <footer>
         <div class="container">
             <p>&copy; 2025 Kent John Branzuela. All rights reserved.</p>
         </div>
     </footer>
-    
-    <script src="script.js"></script>
+
 </body>
 </html>
