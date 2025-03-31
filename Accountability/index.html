@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accountability Management System</title>
@@ -8,8 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
 </head>
-<body>
-    <div id="header-container"></div> <!-- Automatic na maloload ang header -->
+    <body>
+        <li><a href="#about" onclick="showSection('about')">Profile</a></li>
+      <header>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#about" onclick="showSection('about')">About</a></li>
+                    <li><a href="#reference" onclick="showSection('reference')">References</a></li>
+                    <li><a href="#diagram" onclick="showSection('diagram')">Diagram</a></li>
+                    <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header> <!-- Automatic na maloload ang header -->
 
     <section class="carousel-container">
     <div class="carousel">
@@ -49,5 +62,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script.js"></script>
+    <section id="about" class="section">
+    <div class="container">
+        <h2>About The Project</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and 
+            typesetting industry...</p>
+    </div>
+</section>
+  <section id="reference" class="section">
+    <div class="container">
+        <h2>References</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and 
+            typesetting industry...</p>
+    </div>
+</section>
+<section id="diagram" class="section">
+    <div class="container">
+        <h2>Diagram</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and 
+            typesetting industry...</p>
+        <img src="../image/sys.jpg" alt="System Diagram" class="diagram-image">
+    </div>
+</section>
+<section id="contact" class="section">
+    <div class="container">
+        <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+        <p>Feel free to reach out for any inquiries or collaborations.</p>
+        <div class="contact-details">
+            <p><i class="fas fa-phone"></i> +123 456 7890</p>
+            <p><i class="fas fa-envelope"></i> email@example.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Camaman an Centrall Village</p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>
 </body>
 </html>

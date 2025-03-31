@@ -24,3 +24,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Show only "About" section by default
     showSection("#about");
 });
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".animated-link").forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent instant navigation
+            let img = this.querySelector("img");
+            
+            // Add animation effect
+            img.style.transition = "transform 0.3s ease-in-out";
+            img.style.transform = "scale(0.9)";
+            
+            // Wait for animation, then navigate
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 300); // Delay para sa smooth effect
+        });
+    });
+});
