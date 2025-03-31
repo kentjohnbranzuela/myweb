@@ -1,23 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll(".section-content");
-    const navLinks = document.querySelectorAll("nav ul li a");
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
 
     function showSection(sectionId) {
         sections.forEach(section => {
-            if ("#" + section.id === sectionId) {
-                section.classList.add("show");
-            } else {
-                section.classList.remove("show");
-            }
+            section.style.opacity = (section.id === sectionId.replace("#", "")) ? "1" : "0.3";
         });
 
-        // Highlight active menu item
         navLinks.forEach(link => {
-            if (link.getAttribute("href") === sectionId) {
-                link.classList.add("active");
-            } else {
-                link.classList.remove("active");
-            }
+            link.classList.toggle("active", link.getAttribute("href") === sectionId);
         });
     }
 
@@ -25,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", function (event) {
             event.preventDefault();
             const sectionId = this.getAttribute("href");
+            document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
             showSection(sectionId);
         });
     });
