@@ -242,6 +242,26 @@ p {
 }
 
 @media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the menu by default */
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px; /* Position below navbar */
+        left: 0;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+    }
 
     .body {
         background: linear-gradient(135deg, #2c2c2c, #000) fixed;
@@ -251,8 +271,8 @@ p {
         overflow-x: hidden;
         scroll-behavior: smooth;
         font-family: 'Poppins', sans-serif;
-        text-align: center;
-    }
+        
+        }
 
     .container {
         flex-direction: column;
@@ -366,26 +386,3 @@ footer {
 .skills-grid span:hover .fa-css3-alt { color: #0047ab; }
 .skills-grid span:hover .fa-js { color: #ffd700; }
 .skills-grid span:hover .fa-laravel { color: #ff0000; }
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide the menu by default */
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px; /* Position below navbar */
-        left: 0;
-        padding: 20px 0;
-        gap: 20px;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show the menu when active */
-    }
-
-    .hamburger {
-        display: block; /* Show the hamburger icon */
-    }
-}
