@@ -242,6 +242,10 @@ p {
 }
 
 @media (max-width: 768px) {
+    .heros {
+        text-align: center;
+        padding: 0;
+    }
 
     .body {
         background: linear-gradient(135deg, #2c2c2c, #000) fixed;
