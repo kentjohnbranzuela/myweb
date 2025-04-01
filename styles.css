@@ -80,14 +80,6 @@ html {
     background: #0088cc;
     transform: scale(1.05);
 }
-
-/* Container */
-.container {
-    width: 85%;
-    max-width: 1200px;
-    margin: auto;
-}
-
 section {
     scroll-margin-top: 80px; /* Adjust based on your navbar height */
 }
@@ -150,16 +142,7 @@ section {
     color: white;
 }
 /* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 30px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 #hero {
     margin-top: 20px;
@@ -168,6 +151,7 @@ section {
 }
 
 .container {
+width: 85%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -221,26 +205,6 @@ p {
     color: #00aaff; /* Highlight the active link */
     font-weight: bold;
 }
-
-/* Responsive Layouts */
-@media (max-width: 1024px) {
-    .profile-pic {
-        width: 200px; /* Resize for tablet */
-        height: 200px;
-        margin-right: 100px;
-    }
-
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text {
-        text-align: center;
-        max-width: 100%;
-    }
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
     /* Navbar */
