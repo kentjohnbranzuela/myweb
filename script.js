@@ -68,3 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+document.getElementById("hamburger-menu").addEventListener("click", function() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("active"); // Toggle the active class to show/hide the menu
+});
