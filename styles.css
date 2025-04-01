@@ -282,7 +282,10 @@ p {
         width: 250px !important;
         height: 250px !important;
         margin-bottom: 15px;
-    }
+         border-radius: 50%; /* Ensures it's always round */
+        display: block;
+        margin: 0 auto 15px;
+        }
     .hero-text {
         text-align: center;
     }
