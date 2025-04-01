@@ -243,8 +243,22 @@ p {
     }
 
     .nav-links {
-        gap: 10px;
+        display: none; /* Hide navigation links on small screens */
+        width: 100%;
         flex-direction: column;
+        gap: 15px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the nav links when active */
     }
 
     .hero-text h2 {
@@ -331,13 +345,20 @@ footer {
 }
 
 /* Default Icon Colors */
-.fa-html5 { color: #ff6600; }
-.fa-css3-alt { color: #0066ff; }
-.fa-js { color: #f7df1e; }
-.fa-laravel { color: #ff3333; }
+
 
 /* Specific Hover Colors */
 .skills-grid span:hover .fa-html5 { color: #ff4500; }
 .skills-grid span:hover .fa-css3-alt { color: #0047ab; }
 .skills-grid span:hover .fa-js { color: #ffd700; }
 .skills-grid span:hover .fa-laravel { color: #ff0000; }
+.hamburger {
+    display: none; /* Hide the hamburger icon by default */
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+}
+
+.hamburger i {
+    font-size: 2rem;
+}
