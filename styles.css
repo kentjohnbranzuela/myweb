@@ -94,7 +94,7 @@ section {
 /* Navbar */
 .navbar {
     background: rgba(0, 0, 0, 0.8);
-    padding: 15px 0;
+    padding: 15px ;
     position: fixed;
     width: 100%;
     top: 0;
@@ -134,8 +134,14 @@ section {
     color: #00aaff;
 }
 .hamburger {
-    display: none; /* Hidden by default */
+     display: none;
     cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    right: 20px; /* Positions the hamburger to the right side */
+    top: 50%;
+    transform: translateY(-50%); 
 }
 
 .hamburger i {
