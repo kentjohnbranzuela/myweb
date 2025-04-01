@@ -241,65 +241,77 @@ p {
     }
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
-    .hero-text {
-        text-align: center;
-    }
-
-    /* For the profile image */
-    .profile-pic {
-        width: 180px;
-        height: 180px;
-        margin: 0 auto 20px;
-    }
-
-    .container {
-        flex-direction: column;
-        text-align: center; /* Centers all the content inside the container */
-    }
-
+    /* Navbar */
     .navbar {
-        padding: 10px 0;
+        padding: 10px;
     }
-
     .nav-links {
         display: none;
-        width: 100%;
         flex-direction: column;
-        text-align: center;
+        width: 100%;
         background: rgba(0, 0, 0, 0.9);
         position: absolute;
         top: 60px;
         left: 0;
-        padding: 20px 0;
-        gap: 20px;
+        text-align: center;
+        gap: 15px;
+        padding: 15px 0;
     }
-
     .nav-links.active {
         display: flex;
     }
-
-    /* Navbar links */
-    .nav-links a {
-        text-align: center; /* Ensures each navbar item is centered */
-        font-size: 1.1em;
-        padding: 10px 0;
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
     }
-
-    /* Centering Hero Section */
+    
+    /* Hero Section */
     .hero {
-        text-align: center; /* Centers all hero section content */
-    }
-}
-
-/* For even smaller screens */
-@media (max-width: 480px) {
-    .contact h2, .hero-text h2, .hero-text p {
-        text-align: center; /* Ensures all texts are centered on very small screens */
-    }
-
-    .container {
+        flex-direction: column;
         text-align: center;
+        padding: 40px 15px;
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 15px;
+    }
+    .hero-text h2 {
+        font-size: 1.8em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+    .btn {
+        padding: 10px 18px;
+        font-size: 1em;
+    }
+    
+    /* Contact Section */
+    .contact .containers {
+        max-width: 90%;
+        padding: 15px;
+    }
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+    .contact input,
+    .contact textarea {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+    .contact button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+        padding: 15px;
     }
 }
 
