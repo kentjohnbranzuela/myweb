@@ -80,6 +80,14 @@ html {
     background: #0088cc;
     transform: scale(1.05);
 }
+
+/* Container */
+.container {
+    
+    max-width: 1200px;
+    
+}
+
 section {
     scroll-margin-top: 80px; /* Adjust based on your navbar height */
 }
@@ -142,7 +150,15 @@ section {
     color: white;
 }
 /* Hero Section */
-
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #hero {
     margin-top: 20px;
@@ -151,7 +167,7 @@ section {
 }
 
 .container {
-width: 85%; 
+width: 85%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -205,6 +221,26 @@ p {
     color: #00aaff; /* Highlight the active link */
     font-weight: bold;
 }
+
+/* Responsive Layouts */
+@media (max-width: 1024px) {
+    .profile-pic {
+        width: 200px; /* Resize for tablet */
+        height: 200px;
+        margin-right: 100px;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     /* Navbar */
@@ -215,13 +251,15 @@ p {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.95);
         position: absolute;
-        top: 60px;
+        top: 100%;
         left: 0;
         text-align: center;
-        gap: 15px;
+        gap: 12px;
         padding: 15px 0;
+        transition: max-height 0.4s ease-in-out;
+        overflow: hidden;
     }
     .nav-links.active {
         display: flex;
@@ -229,9 +267,11 @@ p {
     .hamburger {
         display: block;
         position: absolute;
-        right: 20px;
+        right: 15px;
+        font-size: 1.8rem;
+        cursor: pointer;
     }
-    
+
     /* Hero Section */
     .hero {
         flex-direction: column;
@@ -239,12 +279,15 @@ p {
         padding: 40px 15px;
     }
     .profile-pic {
-        width: 150px;
-        height: 150px;
-        margin: 0 auto 15px;
+        width: 130px !important;
+        height: 130px !important;
+        margin-bottom: 15px;
+    }
+    .hero-text {
+        text-align: center;
     }
     .hero-text h2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     .hero-text p {
         font-size: 1em;
@@ -253,29 +296,40 @@ p {
         padding: 10px 18px;
         font-size: 1em;
     }
-    
+
+    /* Projects Grid */
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-item {
+        width: 90%;
+        max-width: 320px;
+    }
+
     /* Contact Section */
     .contact .containers {
-        max-width: 90%;
-        padding: 15px;
+        max-width: 95%;
+        padding: 12px;
     }
     .contact h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .contact input,
     .contact textarea {
         padding: 8px;
         font-size: 0.9rem;
+        max-width: 100%;
     }
     .contact button {
-        padding: 8px 16px;
+        padding: 9px 18px;
         font-size: 0.9rem;
     }
-    
+
     /* Footer */
     footer {
-        font-size: 0.9rem;
-        padding: 15px;
+        font-size: 0.95rem;
+        padding: 18px;
     }
 }
 
