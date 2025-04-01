@@ -245,7 +245,7 @@ p {
 @media (max-width: 768px) {
     /* Navbar */
     .navbar {
-        padding: 15px;
+        padding: 30px;
     }
     .nav-links {
         display: none;
@@ -279,9 +279,10 @@ p {
         padding: 40px 15px;
     }
     .profile-pic {
-        width: 200px !important;
-        height: 200px !important;
+        width: 250px !important;
+        height: 250px !important;
         margin-bottom: 15px;
+        margin-right: auto;
     }
     .hero-text {
         text-align: center;
