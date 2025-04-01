@@ -242,6 +242,35 @@ p {
 }
 
 @media (max-width: 768px) {
+    .hero-text {
+        text-align: center;
+        max-width: 100%;
+        padding: 0 20px; /* Add some padding for responsiveness */
+    }
+
+    .hero-text h2 {
+        font-size: 2rem; /* Smaller heading for mobile */
+        text-align: center; /* Center align the heading */
+    }
+
+    .hero-text p {
+        font-size: 1.1rem; /* Adjust paragraph size */
+        text-align: center; /* Center align the paragraph */
+    }
+
+    /* Centering profile picture on mobile */
+    .profile-pic {
+        width: 180px; /* Smaller profile for mobile */
+        height: 180px;
+        margin: 0 auto 20px;
+    }
+
+    /* Center the container and its content */
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .nav-links {
         display: none; /* Hide the menu by default */
         width: 100%;
@@ -255,35 +284,13 @@ p {
         gap: 20px;
     }
 
+    /* Activate menu on hamburger click */
     .nav-links.active {
         display: flex; /* Show the menu when active */
     }
 
     .hamburger {
         display: block; /* Show the hamburger icon */
-    }
-
-    .body {
-        background: linear-gradient(135deg, #2c2c2c, #000) fixed;
-        color: white;
-        padding: 0;
-        display: block;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-        font-family: 'Poppins', sans-serif;
-        
-        }
-
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-pic {
-        width: 180px; /* Smaller profile for mobile */
-        text-align: center;
-        height: 180px;
-        margin: 0 auto 20px;
     }
 
     .navbar {
@@ -295,13 +302,25 @@ p {
         flex-direction: column;
     }
 
-    .hero-text h2 {
-        font-size: 2rem; /* Smaller heading for mobile */
+    .nav-links a {
+        font-size: 1.1em;
+        text-align: center;
+        padding: 10px 0; /* Add padding for touch targets */
     }
+}
 
-    .hero-text p {
-        font-size: 1.1rem; /* Adjust paragraph size */
+/* General Mobile Text Centering */
+@media (max-width: 480px) {
+    .contact h2, .hero-text h2, .hero-text p {
+        text-align: center; /* Ensure all texts are centered */
     }
+}
+
+/* Additional Fixes for Footer Text */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 /* Sections */
