@@ -242,6 +242,7 @@ p {
 }
 
 @media (max-width: 768px) {
+
     .body {
         background: linear-gradient(135deg, #2c2c2c, #000) fixed;
         color: white;
@@ -259,6 +260,7 @@ p {
 
     .profile-pic {
         width: 180px; /* Smaller profile for mobile */
+        text-align: center;
         height: 180px;
         margin: 0 auto 20px;
     }
