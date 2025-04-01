@@ -90,7 +90,6 @@ body {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    font-weight: bold;
     transition: 0.3s;
     padding: 10px 15px;
 }
@@ -346,7 +345,32 @@ body {
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
 } 
+#hm{
+    color: white;
+    text-decoration: none;
+    margin-right: auto;
+    font-weight: bolder;
+}
+.feature-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep the original text color */
+    display: block; /* Ensure it covers the div properly */
+}
 
+.feature-card {
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+.feature-card i {
+    font-size: 40px; /* Adjust icon size */
+    color: #00aaff; /* Icon color */
+    margin-bottom: 10px;
+    display: block;
+}
+.feature-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
 /* Hide all sections initially */
 /* Initially hide sections */
 .section {

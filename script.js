@@ -1,16 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-links a");
-
+    const buttons = document.querySelectorAll(".btn"); // Select all buttons
+    
+    // Function to show the correct section and make it active
     function showSection(sectionId) {
-        sections.forEach(section => {
-            section.style.opacity = (section.id === sectionId.replace("#", "")) ? "1" : "0.3";
-        });
+    sections.forEach(section => {
+        if (section.id === sectionId.replace("#", "")) {
+            section.style.opacity = "1";
+            section.style.pointerEvents = "auto"; // Make sure it's interactive
+        } else {
+            section.style.opacity = "0.3";
+            section.style.pointerEvents = "none"; // Disable interaction for non-active sections
+        }
+    });
 
-        navLinks.forEach(link => {
-            link.classList.toggle("active", link.getAttribute("href") === sectionId);
+    navLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === sectionId);
+    });
+}
+
+    // Add click event for buttons to toggle 'active' class
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            buttons.forEach(btn => btn.classList.remove("active")); // Remove 'active' from all buttons
+            this.classList.add("active"); // Add 'active' to the clicked button
+            
+            const sectionId = this.getAttribute("href");
+            document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
+            showSection(sectionId);
+
+            // Also ensure that the correct nav link is highlighted when the button is clicked
+            navLinks.forEach(link => {
+                if (link.getAttribute("href") === sectionId) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
         });
-    }
+    });
 
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
@@ -20,10 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
             showSection(sectionId);
         });
     });
-
-    // Show only "About" section by default
-    showSection("#about");
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".animated-link").forEach(link => {
         link.addEventListener("click", function (event) {

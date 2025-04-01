@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accountability Management System</title>
+    <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+</head>
+    <body>
+        
+      <header>
+        <nav class="navbar">
+            <a href="index.html" id="hm">View Records</a>
+        </nav>
+    </header> <!-- Automatic na maloload ang header -->
+
+    <section class="carousel-container">
+    <div class="carousel">
+        <a href="../image/records.png" class="image-link">
+            <img src="../image/records.png" alt="System Feature 2">
+        </a>
+        <a href="../image/search.png" class="image-link">
+            <img src="../image/search.png" alt="System Feature 3">
+        </a>
+         <a href="../image/edit.png" class="image-link">
+            <img src="../image/edit.png" alt="System Feature 1">
+        </a>
+    </div>
+</section>
+
+<!-- Fullscreen Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+</div>
+
+    <section class="features">
+    <a class="feature-link">
+        <div class="feature-card">
+            <i class="fas fa-file-alt"></i> <!-- Icon for View Records -->
+            <h2>View Records</h2>
+            <p>Check all accountability records.</p>
+        </div>
+    </a>
+
+    <div class="feature-card">
+        <i class="fas fa-search"></i> <!-- Icon for Search Records -->
+        <h2>Search Records</h2>
+        <p>Search for specific records.</p>
+    </div>
+
+    <div class="feature-card">
+        <i class="fas fa-edit"></i> <!-- Icon for Update Records -->
+        <h2>Update Records</h2>
+        <p>Update records with new information.</p>
+    </div>
+</section>
+
+</body>
+</html>

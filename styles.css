@@ -12,39 +12,39 @@ html {
 }
 .contact {
     background: linear-gradient(135deg, #1a1a1a, #000);
-    padding: 80px 20px;
+    padding: 60px 20px; /* Smaller padding */
     text-align: center;
 }
 
-.contact .container {
-    max-width: 600px;
+.contact .containers {
+    max-width: 500px; /* Smaller container width */
     margin: auto;
     background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    padding: 20px; /* Reduced padding inside */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
 }
 
 .contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Smaller heading size */
+    margin-bottom: 15px;
     color: #00aaff;
 }
 
 .contact form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px; /* Reduced gap between form fields */
 }
 
 .contact input,
 .contact textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px; /* Smaller padding for inputs */
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.95rem; /* Slightly smaller font size */
     background: rgba(255, 255, 255, 0.1);
     color: white;
     outline: none;
@@ -65,8 +65,8 @@ html {
 .contact button {
     background: #00aaff;
     color: white;
-    padding: 12px;
-    font-size: 1rem;
+    padding: 10px 20px; /* Smaller button padding */
+    font-size: 1rem; /* Slightly smaller font size for the button */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -99,17 +99,25 @@ section {
     align-items: center;
 }
 .logo {
-    font-size: 24px;
+    font-size: 1,8em;
     font-weight: bold;
+    color: white;
+    text-decoration: none;
 }
+
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    margin-left: auto;
+}
+.nav-links li {
+    display: inline;
 }
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-size: 1.2em;
     transition: 0.3s;
 }
 .nav-links a:hover {
@@ -117,33 +125,108 @@ section {
 }
 
 /* Hero Section */
-.hero {
-    text-align: center;
-    padding: 150px 20px;
-    background: linear-gradient(135deg, #1a1a1a, #000);
+.hero{
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
-.hero h2 {
-    font-size: 2.5rem;
+#hero{
+    margin-top: 20px;
+    opacity: 1 !important; /* Ensure it's fully visible */
+    pointer-events: auto !important;
+        
 }
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    text-align: left;
+}
+.profile-pic {
+    width: 350px !important;
+    height: 350px !important;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    margin-right: 200px;
+    flex-shrink: 0;
+    rotate: 320deg;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background: #00aaff;
+    padding: 12px 24px;
+    font-size: 1.2em;
     color: white;
-    border-radius: 5px;
+    background: #ff5733;
+    border-radius: 8px;
     text-decoration: none;
+    font-weight: bold;
     transition: 0.3s;
 }
+
 .btn:hover {
-    background: #0088cc;
+    background: #c70039;
+}
+.nav-links a.active {
+    color: #00aaff; /* Highlight the active link */
+    font-weight: bold;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+    .profile-pic {
+        width: 200px; /* Babawasan konti sa tablet */
+        height: 200px;
+        margin-right: 100px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-pic {
+         width: 180px; /* Mas maliit sa mobile */
+        height: 180px;
+        margin: 0 auto 20px;
+    }
 }
 
 /* Sections */
 section {
+    opacity: 0.3;
     padding: 80px 20px;
     text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* Di clickable ang sections na hindi active */
 }
 
+section.active {
+    opacity: 1;
+    pointer-events: auto;
+}
 /* Project Grid */
 .project-grid {
     display: flex;
@@ -187,3 +270,49 @@ footer {
     margin-bottom: 20px;
     border: 3px solid #00aaff; /* Optional: Adds a nice border */
 }
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skills-grid span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Icon Styling */
+.skills-grid i {
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Default Icon Colors */
+.fa-html5 { color: #ff6600; }
+.fa-css3-alt { color: #0066ff; }
+.fa-js { color: #f7df1e; }  /* JavaScript color */
+.fa-laravel { color: #ff3333; }
+
+/* Hover Effects */
+.skills-grid span:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.skills-grid span:hover i {
+    transform: scale(1.2);
+}
+
+/* Specific Hover Colors */
+.skills-grid span:hover .fa-html5 { color: #ff4500; }
+.skills-grid span:hover .fa-css3-alt { color: #0047ab; }
+.skills-grid span:hover .fa-js { color: #ffd700; } /* JavaScript turns bright yellow */
+.skills-grid span:hover .fa-laravel { color: #ff0000; }
