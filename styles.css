@@ -245,7 +245,7 @@ p {
 @media (max-width: 768px) {
     /* Navbar */
     .navbar {
-        padding: 30px;
+        padding: 10px;
     }
     .nav-links {
         display: none;
