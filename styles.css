@@ -419,6 +419,14 @@ footer {
     background: rgba(255, 255, 255, 0.2);
 }
 
+#me{
+     max-width: 600px; /* Adjust width as needed */
+    margin: auto; /* Center the div */
+    padding: 20px;
+    border-radius: 10px; /* Optional: Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow */
+}
 /* Icon Styling */
 .skills-grid i {
     font-size: 24px;
@@ -433,3 +441,99 @@ footer {
 .skills-grid span:hover .fa-css3-alt { color: #0047ab; }
 .skills-grid span:hover .fa-js { color: #ffd700; }
 .skills-grid span:hover .fa-laravel { color: #ff0000; }
+
+.btns{
+    background: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: dashed;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btns:hover{
+    background: #0a00cc;
+    transform: scale(2.05);
+}
+#Attitude {
+    padding: 20px 10px; /* Adjusted for better spacing on mobile */
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#Attitude .container {
+    width: 90%; /* Full width with some margin on mobile */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#Attitude h2 {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.Attitude-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Attitude-list li {
+    font-size: 1rem; /* Smaller text for mobile */
+    line-height: 1.6;
+    margin-bottom: 12px;
+    text-align: left;
+    max-width: 100%; /* Make sure the list fits the mobile screen */
+    margin: 0 auto 12px auto;
+    padding: 5px; /* Added padding for better readability */
+}
+
+.Attitude-list li strong {
+    color: #7d7d7d;
+    font-weight: bold;
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+    #Attitude .container {
+        width: 80%; /* More room for content on tablets */
+    }
+
+    #Attitude h2 {
+        font-size: 2rem; /* Larger heading for tablets */
+    }
+
+    .Attitude-list li {
+        font-size: 1.2rem; /* Slightly larger text for tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    #Attitude .container {
+        width: 70%; /* Centered and spacious layout on larger screens */
+    }
+
+    #Attitude h2 {
+        font-size: 2.2rem; /* Larger heading for desktop */
+    }
+
+    .Attitude-list li {
+        font-size: 1.3rem; /* Larger text for desktop */
+    }
+}
+@media (max-width: 768px) {
+    #nav {
+        display: flex;  /* Show the nav-links in a row */
+        width: 100%;
+        justify-content: center;
+    }
+
+    #nav li {
+        margin: 10px;
+    }
+}
