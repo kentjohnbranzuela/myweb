@@ -273,8 +273,7 @@ p {
     .hamburger {
         display: block;
         position: absolute;
-        right: 15px;  /* Adjusted the position slightly for a better fit */
-        top: 15px;
+        right: 50px;  /* Adjusted the position slightly for a better fit */
         font-size: 1.8rem;
         cursor: pointer;
     }
