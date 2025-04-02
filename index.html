@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Portfolio</title>
-<link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="styles.css?v=1.1">
 </head>
 <body>
   <header>
@@ -26,8 +26,9 @@
             </ul>
         </div>
     </nav>
-</header>
-    <section id="hero" class="heros">
+  </header>
+
+  <section id="hero" class="heros">
     <div class="container">
         <img src="image/p1.jpg" alt="Kent John Branzuela" class="profile-pic">
         <div class="hero-text">
@@ -36,24 +37,25 @@
             <a href="#projects" class="btn">View My Work</a>
         </div>
     </div>
-</section>  
-    <section id="about" class="about">
-        <div class="containers">
-            <h2>About Me</h2>
-            <p>I specialize in building responsive and modern web applications...</p>
-        </div>
-    </section>
-    
-    <section id="projects" class="projects">
+  </section>  
+
+  <section id="about" class="about">
+    <div class="containers">
+        <h2>About Me</h2>
+        <p>I specialize in building responsive and modern web applications...</p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
     <div class="containers">
         <h2>My Projects</h2>
         <div class="project-grid">
-        <div class="project-item">
-                    <a href="Accountability/index.html" class="animated-link">
-                        <img src="image/p2.png" alt="Project 1" class="clickable-image">
-                    </a>
-                    <h3>Accountability Management System</h3>
-                </div>
+            <div class="project-item">
+                <a href="Accountability/index.html" class="animated-link">
+                    <img src="image/p2.png" alt="Project 1" class="clickable-image">
+                </a>
+                <h3>Accountability Management System</h3>
+            </div>
             <div class="project-item">
                 <a href="#">
                     <img src="image/p4.png" alt="Project 2">
@@ -62,9 +64,9 @@
             </div>
         </div>
     </div>
-</section>
-    
-    <section id="skills" class="skills">
+  </section>
+  
+  <section id="skills" class="skills">
     <div class="containers">
         <h2>Skills</h2>
         <div class="skills-grid">
@@ -74,26 +76,63 @@
             <span><i class="fab fa-laravel"></i> Laravel</span>
         </div>
     </div>
-</section>
-    
-    <section id="contact" class="contact">
+  </section>
+
+  <section id="contact" class="contact">
     <div class="containers">
         <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
-</section>
-    
-    <footer>
-        <div class="containers">
-            <p>&copy; 2025 Kent John Branzuela. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <form id="contact-form">
+  <input type="text" name="name" id="from_name" placeholder="Your Name" required>
+  <input type="email" name="email" id="reply_to" placeholder="Your Email" required>
+  <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+  <input type="hidden" name="time" id="time"> <!-- Hidden field para sa oras -->
+  <button type="submit" class="btn">Send Message</button>
+</form>
 
-    <script src="script.js"></script>
+        <!-- Success Message (Optional) -->
+        <div id="success-message" style="display:none;">
+            <p>Your message has been sent!</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- Include EmailJS script -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script>
+    // Initialize EmailJS
+    emailjs.init("PVQ9XplIJLg2_Ilj-"); // Correct User ID
+
+// Form submission logic
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get current date and time
+    const now = new Date();
+    const formattedTime = now.toLocaleString(); // Format: MM/DD/YYYY, HH:MM AM/PM
+
+    // Set the value of the hidden input field
+    document.getElementById('time').value = formattedTime;
+
+    // Use sendForm with the correct service ID and template ID
+    emailjs.sendForm('service_yus11h3', 'template_053ez6o', form)
+        .then(function(response) {
+            console.log('SUCCESS!', response);
+            document.getElementById('success-message').style.display = 'block';
+            form.reset();  // Reset form after successful submission
+        }, function(error) {
+            console.log('FAILED...', error);
+        });
+});
+  </script>
+
+  <footer>
+    <div class="containers">
+        <p>&copy; 2025 Kent John Branzuela. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

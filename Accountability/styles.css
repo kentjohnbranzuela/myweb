@@ -619,3 +619,9 @@ body {
 .icon-container i {
     font-size: 3rem;             /* Make the icons larger */
 }
+.foot{
+    background-color: rgb(0, 0, 0 );
+    padding: 20px;
+    text-align: center;
+    color: white;
+}

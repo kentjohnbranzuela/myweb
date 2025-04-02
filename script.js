@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-links a");
@@ -86,3 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+//Emailjs
+ 
