@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Style Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f3f3f3;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0; /* Tanggalin ang sobra padding */
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0; /* Tanggalin ang margin */
+        }
+
+        .navbar {
+            width: 100%;
+            background: #222;
+            padding: 0; /* Tanggalin ang padding */
+            display: flex;
+            justify-content: center;
+            margin: 0; /* Tanggalin ang margin */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #b7c8b8; /* Green background */
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #353e36; /* Darker green on hover */
+        }
+
+        .book-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 700px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .guide {
+            width: 100%;
+            color: rgb(238, 238, 238);
+            background-color: #222;
+            font-size: 10px;
+        }
+
+        .book {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .page {
+            flex: 1 1 45%;
+            min-width: 300px;
+            height: 400px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .page {
+                flex: 1 1 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Accountability Management System</header>
+    <header>View Records</header>
+            <i class="guide">Click the View Button to Back on the View Records Page</i>    
+
+    <nav class="navbar">
+        <a href="../Accountability/records.html" id="hm">View Records</a>
+    </nav>
+    <div class="book-container">
+        <div class="book">
+            <div class="page">
+                <h2>View Records</h2>
+                <p>Ang "View Records" ay isang mahalagang bahagi ng system kung saan makikita ang lahat ng naitala na datos. Ito ay nagbibigay ng mabilisang access sa impormasyon.</p>
+            </div>
+            <div class="page">
+                <h2>Purpose</h2>
+                <p>Ang layunin ng View Records ay upang mapadali ang pag-monitor ng datos. Maaari itong gamitin para sa pagsusuri at pagkuha ng tamang impormasyon sa loob ng ilang segundo.</p>
+            </div>
+            <div class="page">
+                <h2>Advantages</h2>
+                <ul>
+                    <li>Mabilisang pag-access ng impormasyon</li>
+                    <li>Mas madaling pagsubaybay ng records</li>
+                    <li>Nakakatulong sa pag-organisa ng data</li>
+                </ul>
+            </div>
+            <div class="page">
+                <h2>Disadvantages</h2>
+                <ul>
+                    <li>Maaaring maging overloaded ang system kung sobrang dami ng records</li>
+                    <li>Kailangan ng maayos na data entry upang maiwasan ang errors</li>
+                    <li>Pangangailangan ng tamang access control upang maprotektahan ang data</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

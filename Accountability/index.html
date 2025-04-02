@@ -12,19 +12,27 @@
     <body>
         
       <header>
-        <nav class="navbar">
-            <a href="../index.html" id="hm">Portfolio</a>
+    <nav class="navbar">
+        <a href="../index.html" id="hm" class="btn">Portfolio</a>
 
-            <div class="container">
-                <ul class="nav-links">
-                    <li><a href="#about" onclick="showSection('about')">About</a></li>
-                    <li><a href="#reference" onclick="showSection('reference')">References</a></li>
-                    <li><a href="#diagram" onclick="showSection('diagram')">Diagram</a></li>
-                    <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header> <!-- Automatic na maloload ang header -->
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="container">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" onclick="showSection('about'); closeMenu();">About</a></li>
+                <li><a href="#reference" onclick="showSection('reference'); closeMenu();">References</a></li>
+                <li><a href="#diagram" onclick="showSection('diagram'); closeMenu();">Diagram</a></li>
+                <li><a href="#contact" onclick="showSection('contact'); closeMenu();">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+ <!-- Automatic na maloload ang header -->
 
     <section class="carousel-container">
     <div class="carousel">
@@ -49,22 +57,23 @@
     <section class="features">
         <a href="records.html" class="feature-link">
     <div class="feature-card">
-        <h2>View Records</h2>
+        <h2><i class="fas fa-list-alt" style="color: rgb(31, 28, 28);"></i> Check all records.</h2>
         <p>Check all accountability records.</p>
     </div>
 </a>
             <a href="add.html" class="feature-link">
     <div class="feature-card">
-        <h2>Add Data</h2>
+        <h2><i class="fas fa-plus" style="color: rgb(31, 28, 28);"></i> Add Data</h2>
         <p>Input new accountability information.</p>
     </div>
-</a>
+</a>    
+        <a href="reports.html" class="feature-link">
         <div class="feature-card">
-            <h2>Generate Reports</h2>
+            <h2><i class="fas fa-folder-open" style="color: rgb(31, 28, 28);"></i>Reports</h2>
             <p>Create detailed reports of records.</p>
         </div>
     </section>
-
+</a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script.js"></script>

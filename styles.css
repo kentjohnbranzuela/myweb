@@ -142,6 +142,7 @@ section {
     position: absolute;
     right: 20px; /* Positions the hamburger to the right side */
     top: 50%;
+    
     transform: translateY(-50%); 
 }
 
@@ -247,6 +248,7 @@ p {
     .navbar {
         padding: 10px;
     }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -259,15 +261,20 @@ p {
         gap: 12px;
         padding: 15px 0;
         transition: max-height 0.4s ease-in-out;
+        max-height: 0; /* Initially hide the menu */
         overflow: hidden;
     }
+
     .nav-links.active {
         display: flex;
+        max-height: 500px; /* Adjust the max-height value as needed */
     }
+
     .hamburger {
         display: block;
         position: absolute;
-        right: 15px;
+        right: 15px;  /* Adjusted the position slightly for a better fit */
+        top: 15px;
         font-size: 1.8rem;
         cursor: pointer;
     }
@@ -278,23 +285,28 @@ p {
         text-align: center;
         padding: 40px 15px;
     }
+
     .profile-pic {
         width: 250px !important;
         height: 250px !important;
         margin-bottom: 15px;
-         border-radius: 50%; /* Ensures it's always round */
+        border-radius: 50%; /* Ensures it's always round */
         display: block;
         margin: 0 auto 15px;
-        }
+    }
+
     .hero-text {
         text-align: center;
     }
+
     .hero-text h2 {
         font-size: 1.6em;
     }
+
     .hero-text p {
         font-size: 1em;
     }
+
     .btn {
         padding: 10px 18px;
         font-size: 1em;
@@ -305,6 +317,7 @@ p {
         flex-direction: column;
         align-items: center;
     }
+
     .project-item {
         width: 90%;
         max-width: 320px;
@@ -315,15 +328,18 @@ p {
         max-width: 95%;
         padding: 12px;
     }
+
     .contact h2 {
         font-size: 1.4rem;
     }
+
     .contact input,
     .contact textarea {
         padding: 8px;
         font-size: 0.9rem;
         max-width: 100%;
     }
+
     .contact button {
         padding: 9px 18px;
         font-size: 0.9rem;

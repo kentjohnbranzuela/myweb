@@ -109,3 +109,13 @@ function showSection(sectionId) {
         section.scrollIntoView({ behavior: "smooth", block: "center" });
     }, 300);
 }
+ function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("show"); // Toggle visibility of menu
+    }
+
+    // Close the menu when a link is clicked
+    function closeMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.remove("show"); // Hide the menu
+    }

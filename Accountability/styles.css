@@ -72,13 +72,30 @@ body {
     z-index: 1000;
     display: flex;
     justify-content: flex-end; /* Para nasa kanan lang ang links */
+    align-items: center;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
 }
 
 /* Navigation Links (Pinaka-Kanan) */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 5px; /* Para may sapat na pagitan */
+    gap: 20px; /* Para may sapat na pagitan */
     padding-right: 10px; /* Para hindi dumikit sa dulo ng screen */
 }
 
@@ -225,7 +242,28 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+.btn {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 12px 24px; /* Increased padding for a more button-like appearance */
+    background-color: #808380; /* Green background */
+    border-radius: 5px;
+    border: none; /* Removes default border */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold; /* Makes the text bold */
+}
 
+.btn:hover {
+    background-color: #979797; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.btn:active {
+    background-color: #081f0a; /* Even darker green when clicked */
+    transform: translateY(0); /* Reset lift effect when clicked */
+}
 /* Click Effect */
 .about:active {
     transform: scale(1.02);
@@ -472,4 +510,112 @@ body {
 .social-icons a:hover {
     color: #00aaff;
     transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .btn {
+        padding: 10px 20px; /* Adjust padding on smaller screens */
+        font-size: 16px; /* Slightly smaller text */
+        margin: 10px 0; /* Stack the buttons vertically */
+        width: 100%; /* Full width button on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 10px 15px; /* Smaller padding for very small screens */
+        font-size: 14px; /* Even smaller text for very small screens */
+        width: 100%; /* Make the button take up the full width on smaller screens */
+    }
+}
+@media (max-width: 768px) {
+    
+    .navbar {
+        padding: 10px 20px; /* Reduce padding for mobile */
+        display: flex;
+        flex-direction: column; /* Stack navbar items */
+        justify-content: center; /* Center navbar items */
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        display: block;
+        width: 100%; /* Full width for each navbar item */
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 0; /* Adjust padding for mobile */
+        text-align: center; /* Center-align the text */
+    }
+
+    .btn {
+        width: 100%; /* Ensure the button is full-width */
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+/* Navbar styling for very small screens (below 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px; /* Further reduce padding for smaller devices */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller text on very small screens */
+    }
+
+    .btn {
+        font-size: 14px; /* Smaller button text */
+        padding: 8px 12px; /* Smaller padding */
+    }
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Below the navbar */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Background for the menu */
+        width: 100%;
+        padding: 20px;
+    }
+
+    .nav-links li {
+        width: 100%; /* Full width for each menu item */
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 12px 0;
+        width: 100%; /* Full width links */
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show the menu when toggled */
+    }
+}
+.icon-container {
+    display: flex;               /* Use flexbox to arrange items in a row */
+    justify-content: center;     /* Centers the icons horizontally */
+    align-items: center;         /* Centers the icons vertically */
+    gap: 20px;                   /* Adds space between the icons */
+}
+
+.icon-container i {
+    font-size: 3rem;             /* Make the icons larger */
 }

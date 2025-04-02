@@ -68,7 +68,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-document.getElementById("hamburger-menu").addEventListener("click", function() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active"); // Toggle the active class to show/hide the menu
+    // Close the menu if the user clicks anywhere outside the menu
+    document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+    const navLinksItems = document.querySelectorAll('#nav-links a');
+
+    // Toggle the menu when the hamburger icon is clicked
+    hamburgerMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close the menu when a nav link is clicked
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+        });
+    });
 });
